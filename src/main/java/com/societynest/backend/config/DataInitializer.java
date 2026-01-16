@@ -4,6 +4,7 @@ import com.societynest.backend.entity.*;
 import com.societynest.backend.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Random;
 
 @Component
+@DependsOn("entityManagerFactory")
 public class DataInitializer implements CommandLineRunner {
 
     @Autowired
